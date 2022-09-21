@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bike Man</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           .bike{
+                position: relative;
+            background: url(img/bikealone.png) no-repeat;
+                width: 150px;
+                height: 130px;
+                 top: 314px;
+                left: 10px;
+             -webkit-animation: bi ease-in-out 4s forwards infinite;
+            }
+            
+            @-webkit-keyframes bi{
+                0%{
+               
+                   -webkit-transform: translateX(0px);
+                }
+      
+
+                100%{
+               -webkit-transform: translateX(800px);
+                }
+            
+            }
+            
+            .bikeshadow{
+                position: relative;
+                height: 5px;
+                background-color: black;
+				border-radius: 100%;
+                width: 150px;
+                top: 310px;
+                opacity: 0.3;
+                -webkit-animation: bi ease-in-out 4s forwards infinite;
+            }
+            
+            
+            
+            .front{
+                position: absolute;
+                background: url(img/fronttire.png) no-repeat;
+                width: 54px;
+                height: 54px;
+                left: 100px;
+                top: 390px;
+                -webkit-animation: fo ease-in-out 4s forwards infinite;
+                
+            }
+               @-webkit-keyframes fo{
+                 0%{
+               
+                   -webkit-transform: translateX(0px) rotate(0deg);
+                }
+                100%{
+                 -webkit-transform: translateX(800px) rotate(2880deg);
+                }
+            }
+            
+                .back{
+                    position: absolute;
+                background: url(img/backtire..png) no-repeat;
+                width: 42px;
+                height: 42px;
+                    top: 400px;
+                   -webkit-animation: fo ease-in-out 4s forwards infinite;   
+                
+            }
+            
+            
+            
+            .sun{
+                position: absolute;
+                height: 500px;
+                width: 500px;
+                border-radius: 250px;
+                background-color: yellow;
+                top: 500px;
+                opacity: 10px;
+                -webkit-animation: su ease-in-out 9s forwards;   
+            }
+
+             @-webkit-keyframes su{
+                0%{
+               
+                   -webkit-transform: translateY(0px);
+                }
+      
+                50%{
+                     -webkit-animation-delay: 2s;
+                 -webkit-transform: translateY(-500px);
+                    
+                }
+                 100%{
+                    
+                    -webkit-transform: translateY(0px);
+       
+                 }
+            
+            }
+            
+            .treeshdowcase{
+            top: 270px;
+    position: absolute;
+    width: 391px;
+    height: 332px;
+    -webkit-perspective: 200px; /* Chrome, Safari, Opera  */
+                
+    perspective: 150px;
+                
+                
+            }
+            
+            
+            .treeshadow{ 
+    position: absolute; 
+    background:url(img/tree.png) no-repeat;
+     /* Chrome, Safari, Opera  */
+                width: 391px;
+    height: 332px;
+    transform: rotateX(80deg);
+                -webkit-transform: rotateX(-100deg);
+                opacity: 0.0;
+                -webkit-animation: te ease-in-out 8s forwards;
+            }
+            
+             @-webkit-keyframes te{
+                0%{
+               opacity: 0.0;
+                  
+                }
+      
+                50%{
+                opacity: 0.7;
+                }
+                 100%{
+                opacity: 0.0;
+                }
+            
+            }
+            
+            #environment{
+               position: relative;
+           margin: 0 auto;
+               width: 1000px;
+               height: 500px;
+               background-color: #bb4;
+               overflow: hidden;
+           } 
+
+.ground{
+    position: absolute;
+    width: 1000px;
+    height: 150px;
+    top: 420px;
+    background-color: brown;
+  
+}
+        
+.house{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    left: 700px;
+    top: 150px;
+    border-top-left-radius: 50%;
+
+}
+
+.door{
+    position: relative;
+    width: 10px;
+    height:200px;
+    margin-top: 100px;
+    margin-left: 5px;
+    background-color: black;
+    border-top-left-radius: 50%;
+    -webkit-animation: dor   ease-in 4s ;
+    -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes dor{
+                 0%{
+               -webkit-transform-origin: right top;
+                   -webkit-transform: rotate(0deg);
+                }
+                50%{
+                    -webkit-transform-origin: right top;
+                 -webkit-transform: rotate(200deg);
+                }
+       100%{
+                    -webkit-transform-origin: right top;
+                 -webkit-transform: rotate(0deg);
+                }
+            }
+
+.tree {
+    position: absolute;
+    background: url(img/tree.png);
+    width: 391px;
+    height: 332px;
+    top: 100px;
+
+}
+
+#div1 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    -webkit-perspective: 50px; /* Chrome, Safari, Opera  */
+    perspective: 150px;
+}
+
+#div2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    -webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(45deg);
+}
+
+.fallingleaves{
+    position: absolute;
+    width: 391px;
+    height: 320px;
+    top: 121px;
+    overflow: hidden;
+    left: 10px;
+
+}
+.leafs{
+position: relative;
+background: url(img/fallingflaes.png) repeat-y;
+    width: 391px;
+             height: 1320px;
+     -webkit-animation: leaf  linear 9s infinite;
+}
+
+@-webkit-keyframes leaf{
+from{top: 0px;}
+                to{top: 320px;}
+
+}
+
+.cloud{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: -300px;
+    -webkit-animation : co 10s  linear 4s forwards;
+}
+
+.cloud1{
+    position: absolute;
+    width: 200px;
+        height: 100px;
+    background: #bbe;
+    border-radius: 100%;
+    left: 100px
+}
+.cloud2{
+    position: absolute;
+    width: 200px;
+        height: 100px;
+    background: #bbe;
+    border-radius: 100%;
+}
+.cloud3{
+    position: absolute;
+    width: 200px;
+        height: 100px;
+    background: #bbe;
+    border-radius: 100%;
+    top: 20px;
+    left: 50px;
+}
+
+@-webkit-keyframes co{
+    0%{ transform: translateX(0px);}
+    50%{transform: translateX(500px);}
+    100%{transform: translateX(600px);}
+
+}
+
+
+        </style>
+	</head>
+	<body>
+        <div id="environment">
+            <div class="sun"></div>
+            <div class="cloud">
+             <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="cloud3"></div>
+                </div>
+               <div class="ground"></div>
+            <div class="tree"></div>
+           <div class="fallingleaves">
+                <div class="leafs"></div>
+            </div>
+            
+            <div class="treeshdowcase">
+                <div class="treeshadow"></div>
+            </div>
+           <div class="bike"></div>
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="bikeshadow"></div>
+            <div class="house">
+                <div class="door"></div>
+            <div class="window"></div>
+            
+            </div>
+     
+        
+        </div>
+        
+        
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>
